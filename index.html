@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Use the <head> element to define the head elements, including title (required), style, link (for defining a link between this document and an external resource such as an external style sheet)-->
+<head>
+	<title>Jonathon Nagatani | dedication to you</title>
+	<!-- when linking to an external style sheet, use relative file paths, NOT absolute file paths. Use ./ to start at the same folder as this html file. Use / to go to another folder and continue until you have the right .css file. If you need to go up a folder(s), use ../ -->
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+
+	<!-- HOMEWORK 2: including the viewport tag so the media queries will function and perform properly on mobile devices -->
+	<!-- A <meta> viewport element gives the browser instructions on how to control the page's dimensions and scaling. The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device). The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<!-- added the div of class wrapper for the ryanfait.com sticky footer -->
+<div class="wrapper">
+	<div class="center-the-content full-header-border">
+	<!-- The header goes at the top of the page.-->
+	<header>
+		<div id="my-name">Jonathon Nagatani
+		</div>
+		<div id="between-name-and-nav"></div>
+		<nav id="page-links-nav">
+			<!-- Can also use the <a> tag to create a link to go to a specific "id" on the page. For example, <a href="#second-paragraph">go to the second paragraph!?</a> Could also be useful for a "get to the top of the page" link for a long webpage. -->
+			<a class="nav-link" href="#about-me" title="about Jonathon">About</a> |
+			<a class="nav-link" href="portfolio.html" title="Jonathon's portfolio">Portfolio</a> |
+			<a class="nav-link" href="contact.html" title="contact Jonathon">Contact</a>
+		</nav>
+		<!--
+		use an unordered list with a float to create a horizontal menu, instead of creating a nav:
+
+		<ul id="page-links-menu">
+
+			<li><a href="#about-me" title="about Jonathon">About</a></li>
+			<li><a href="portfolio.html" title="Jonathon's porfolio">Portfolio</a></li>
+			<li><a href="contact.html" title="contact Jonathon">Contact</a></li>
+		</ul>
+		-->
+	</header>
+	</div> <!-- /full-header-border AND /center-the-content -->
+	
+	<!-- Use a class when you will be using the css style elements more than once -->
+	<!-- Use an id when you plan to use the css style elements only once ie for this one specific instance of this element only-->
+	<div class="center-the-content">
+	<!-- need to have "style="clear:both;" at the beginning of this section; it specifies floating elements are not allowed to float on the left or right of this element and clears the floats (from above ie the header!-->
+	<div class="full-background-image">
+	<div class="middle-section" style="clear:both">
+		<!-- a div defines something which takes up its own distinct vertical area. Usually an automatic <br> follows each div element, unless changed within the css -->
+
+		<!-- Use a section, which "is the same thing as a div," but to help improve google search rankings so google better understands the different components of the webpage-->
+		<section class="main-content" id="about-me"> <!-- added the id about-me so the nav link at the page top will go to this about-me id section -->
+			<h2 title="about jonathon nagatani">About Jonathon</h2>
+			<!-- <hr> adds a line. You can also define a percentage width eg <hr width="70%"> Don't use a closing tag or it may screw stuff up!-->
+			<hr>
+			<!-- By inserting the image inside the first paragraph, you can float the image left so all paragraph text will float on the right side of the image. For images, don't forget: don't use a closing tag or it could screw stuff up!-->
+			<!-- OR Phil recommended that the photo can be outside the first <p> and add the CSS "display:inline" to the photo-jonathon -->
+			<img src="./images/photo jn.jpg" alt="jonathon nagatani" title="jonathon nagatani" id="photo-jonathon">
+			<p id="first-paragraph">Jonathon's mission is simple. Create a "Wow!" experience for each of his clients, every day. As a Realtor and up-and-coming Full Stack Web Developer, Jonathon provides services tailored to your specific needs, at exceptional value.</p>
+			<p id="second-paragraph">Expect straightforward advice, research, and service, supported by salient analysis custom designed for your needs. Whether buying your next property, selling your home for the most money in the most convenient manner, or seeking a completely custom application to enhance your everyday life, enjoy the benefits of Jonathon's comprehensive resources carefully designed to achieve your goals. Jonathon dedicates himself to thrilling clients with the results of their collaboration.</p>
+			<p>Call or e-mail Jonathon now for a complimentary, no-obligation consultation. Start enjoying the freedom and security that confidential guidance and eloquent application development will bring to your business and personal lives. Your unconditional complete satisfaction is assured.</p>
+		</section>
+		<div id="contact-me">
+			<h2>Connect with Me</h2>
+			<hr width="80%">
+			<a href="https://github.com/nmsb10" target="_blank" title="nmsb10"><img class="logo-link" src="./images/logo github.png"></a>
+			<!-- need to make the linkedin logo slightly larger than the other two because the actual image already appears to have an approximate 5px margin. Increased the linkedin logo width in the CSS-->
+			<a href="https://www.linkedin.com/in/jonathonnagatani" target="_blank" title="jonathon on linkedin"><img id="logo-link-linkedinsmaller" src="./images/logo linkedin.png"></a>
+			<a href="http://stackoverflow.com/users/6828743/happytoo?tab=profile" target="_blank" title="jonathon on stack overflow"><img class="logo-link" src="./images/logo stack overflow.png"></a>
+		</div>
+	<br style="clear:both"/>
+	</div> <!-- /middle-section -->
+	</div> <!-- /full-background-image -->
+	</div> <!-- /center-the-content -->
+
+	<!-- need this div class="push" for the ryanfait.com sticky footer-->
+	<div class="push"></div>
+</div><!--/wrapper -->
+	<!-- The footer goes at the bottom of the page-->
+	<footer>
+		<div id="main-footer">Copyright (c) 2016 Jonathon Nagatani. &lthappy face here&gt. All rights reserved.</div>
+	</footer>
+
+</body>
+</html>

@@ -1,0 +1,530 @@
+/*Remember: in CSS, every element rests within a series of boxes.
+These boxes are defined from inside to outside: content, padding, border, margin.
+*/
+
+/* may also define attributes for multiple classes/ids at once, separated by commas:
+eg p, h1, h2, #my-name {} */
+html, body{
+	/* height: 100% for the ryanfait sticky footer */
+	height: 100%;
+}
+
+body{
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	/*color defines the text color*/
+	color: #777777;
+}
+
+.center-the-content{
+	text-align:center;
+}
+
+.wrapper{
+	min-height: 100%;
+	/*don't forget: use !important to override every other
+	instance where this particular attribute is defined! Use Sparingly! */
+/* removed this due to Phil's suggestion
+	height: auto !important;
+	height: 100%;
+*/
+	/*used -66px here because the footer height is 66px*/
+	margin: 0 auto -66px;
+/* added this here, so the middle section space between the
+footer and bottom of the middle section always has the
+background image showing.
+*/
+	background-image: url("../images/gray_jean.png");
+}
+
+header{
+	width: 960px;
+	/* in order for the header footer to display correctly, this
+	height must equal the height of the "my-name" div!*/
+	height: 82px;
+	/* adding margin left and right: auto centers the element */
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.full-header-border{
+	/*background color defines the content color*/
+	background-color: #ffffff;
+	border-bottom-width:2px;
+	border-bottom-style: solid;
+	border-bottom-color: #cccccc;
+	/*"padding:" may have 1 - 4 values (units of px). If four values,
+	values define top, right, bottom, and left padding.
+	If three values, values define top padding, right & left padding,
+	and bottom padding.
+	If two values, values define top & bottom padding, and right
+	and left padding.
+	If one value, the value defines padding for all four sides. */
+	padding-top: 30px;	
+}
+
+h1, h2, h3{
+	/* font-family may hold several font names. If the browser
+	does not support the first font, it tries the next font.
+	Start with the font you want, and always end with a generic
+	family (such as "serif", "sans-serif", "cursive), to let the
+	browser pick a similar font in the generic family.*/
+	/* use "font:" to set all the font properties in one declaration.
+	font: font-style font-variant font-weight font-size/line-height font-family;*/
+	font-family:'Georgia', Times, 'Times New Roman', serif;
+	color: #4aaaa5;
+}
+
+#my-name{
+	font-family:'Georgia', Times, 'Times New Roman', serif;
+	font-size: 28px;
+	/*font-weight: 400 is normal, 700 is bold */
+	font-weight: 700;
+	color: white;
+	text-align: center;
+	background-color:#4aaaa5;
+	padding:25px;
+	border-radius: 7px 7px 0px 0px;
+	float:left;
+}
+
+#page-links-nav{
+	font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 18px;
+    color: #777777;
+    padding: 35px 0px 25px 0px;
+/*    margin-left: 369px; */
+	overflow: hidden;
+    float:left;
+}
+
+#between-name-and-nav{
+	width: 369px;
+	height:10px;
+	margin:0px;
+	border:0px;
+	padding:0px;
+	float:left;
+}
+
+.nav-link{
+	padding: 10px;
+	border-radius:8px;
+	color: #777777;
+}
+
+.nav-link:hover{
+	background-color: lime;
+}
+
+/* for the navigation menu, use the following code if you want to use an
+unordered list with a float.
+
+#page-links-menu{
+	font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #FFFFFF;
+}
+
+li {
+    float: left;
+}
+
+li a {
+	/* "display: inline" displays a list of links as a horizontal menu
+    display: inline-block;
+    color: #777777;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: lime;
+}
+*/
+
+.full-background-image{
+	background-image: url("../images/gray_jean.png");
+}
+
+.middle-section{
+	width: 960px;
+	height:auto;
+	/* put this in the full-backbround-image!
+	background-image: url("../images/gray_jean.png");
+	*/
+	/* adding margin left and right: auto centers the element */
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.main-content{
+	/* width is 650px-(total of left + right borders and padding) */
+	width:596px;
+	font-size:18px;
+	text-align: left;
+	background-color:#ffffff;
+	padding: 15px 25px 25px 25px;
+	/* border: width style color; */
+	border:1px solid #cccccc;
+	border-radius: 7px;
+	margin-top:50px;
+	float: left;
+}
+
+/* ????? no comma separating class main-content-about-me and p,
+because I want these rules to affect ONLY material which is
+BOTH in main-content-about-me AND is p */
+.main-content p{
+	text-align: justify;
+/*	this increases the spaces between lines */
+	line-height: 150%;
+}
+
+#photo-jonathon{
+	width: 125px;
+	margin: 0px 20px 0px 0px;
+	float: left;
+/*	this will help the paragraph text wrap around the photo
+*/	display:inline;
+}
+
+#second-paragraph{
+}
+
+#contact-me{
+	width: 270px;
+	font-size: 15px;
+	text-align: center;
+	background-color:#ffffff;
+	padding:5px 0px 15px 0px;
+	border:1px solid #cccccc;
+	border-radius:7px;
+	margin-top:50px;
+	margin-left:36px;
+	float: left;
+}
+
+.logo-link{
+	width: 55px;
+	margin: 5px;
+}
+
+#logo-link-linkedinsmaller{
+	width: 65px;
+}
+
+.portfolio-links-line{
+	margin-top: 25px;
+	margin-bottom: 30px;
+}
+
+.new-image-link-column1{
+	/* the original photos were 4512px X 3008px*/
+	width: 282px;
+	height: 188px;
+	position: relative;
+	float:left;
+}
+
+.new-image-link-column2{
+	width: 282px;
+	height: 188px;
+	position: relative;
+	/* content width was 596px-(2*282px)= */
+	margin-left:32px;
+	margin-bottom:45px;
+	float:left;
+}
+
+.portfolio-project-photo{
+	position: relative;
+	width: 100%;
+}
+
+.portfolio-link-banner{
+	position:absolute;
+	top:110px;
+	left: 0;
+/*	width should be 100% according to
+	https://css-tricks.com/text-blocks-over-image/*/
+	width: 282px;
+	font-size: 23px;
+	color:white;
+	text-align: center;
+/*	these rgba values correspond to background-color: #4aaaa5*/
+	background: rgba(74,170,165,0.57);
+	padding: 8px 0px;
+}
+
+form{
+	font-size:19px;
+}
+
+input[type="text"]{
+	height: 25px;
+	/* defining width as 100% makes the input field width as
+	wide as the form */
+	width: 100%;
+	font-size:22px;
+	display:block;
+	margin-right:0px;
+}
+
+input[type="tel"]{
+	height: 25px;
+	font-size:22px;
+}
+
+textarea{
+	font-size:22px;
+	height: 275px;
+	width: 95%;
+}
+
+input[type="submit"] {
+    font-size: 20px;
+    color:white;
+	background-color:#4aaaa5;
+    padding:11px;
+    border-radius: 7px;
+}
+
+/* required for the ryanfait sticky footer. Defining the
+push class height as anything greater than the footer height
+ensures the content above the footer is (this height - footer height)
+above the footer. However, if you want the content above the footer
+to end directly flush with with top of the footer, this height
+should equal the footer height. */
+footer, .push{
+	/*height: 66px;*/
+	height: 66px;
+}
+
+#main-footer{
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 10px;
+	color: white;
+	text-align: center;
+	background-color: #666666;
+	padding: 25px;
+	clear: both;
+	border-top: 5px solid #4aaaa5;
+}
+
+
+/*MEDIA QUERIES FOR HOMEWORK 2*/
+
+/*for width of a smaller desktop*/
+@media screen and (max-width: 980px){
+	.center-the-content{
+		width:auto;
+	}
+	header{
+		width:auto;
+		height:114px;
+		margin-left:auto;
+		margin-right:auto;	
+	}
+	#my-name{
+		width:25%;
+	}
+	#between-name-and-nav{
+		height:50px;
+		width:27%;
+	}
+
+	#page-links-nav{
+		width:38%;
+		padding:55px 0px 35px 0px;
+	}
+
+	.middle-section{
+		width:auto;
+		margin-right:0px;
+		margin:auto;
+		display:block;
+	}
+
+	.main-content{
+		width: 50%;
+		margin-bottom:50px;
+	}
+
+	.contact-me{
+		width: 25%;
+	}
+
+	#photo-jonathon{
+		width: 170px;
+		margin:0px auto 20px;
+		display: block;
+	}
+
+	#first-paragraph{
+		clear:both;
+		margin-top:15px;
+	}
+
+	.new-image-link-column1{
+		/* the original photos were 4512px X 3008px*/
+		width: 90%;
+		display:block;
+		margin-left:auto;
+		margin-bottom:110px;
+	}
+
+	.new-image-link-column2{
+		width: 90%;
+		margin-left:auto;
+		margin-bottom:110px;
+	}
+
+	.portfolio-link-banner{
+		position:absolute;
+		top: 80%;
+		width: 100%;
+	}
+}
+
+/*for width of a tablet*/
+@media screen and (max-width: 768px){
+	.full-header-border{
+		padding-top: 0px;	
+	}
+	header{
+		width:auto;
+		height:62px;
+		margin-left:auto;
+		margin-right:auto;	
+	}
+	#my-name{
+		width:42%;
+		font-size: 25px;
+		padding:17px;
+	}
+	#between-name-and-nav{
+		height:30px;
+		width:5%;
+	}
+
+	#page-links-nav{
+		width:45%;
+		padding:21px 0px 20px 0px;
+	}
+
+	.main-content{
+		display:block;
+		width: 85%;
+		margin-bottom:0px;
+	}
+	#photo-jonathon{
+		width: 125px;
+		margin: 0px 20px 0px 0px;
+		float: left;
+		display:inline;
+	}
+
+	#first-paragraph{
+		/* clear:none NOT clear:both fixed the paragraph text, so it
+		went back to "framing" the image*/
+		clear:none;
+	}
+
+	.new-image-link-column1{
+		/* the original photos were 4512px X 3008px*/
+		width: 45%;
+		display:block;
+		float:left;
+		margin-bottom:10px;
+	}
+
+	.new-image-link-column2{
+		width: 45%;
+		position:relative;
+		margin-left:8%;
+		margin-bottom:10px;
+	}
+
+	.portfolio-link-banner{
+		position:absolute;
+		top:50%;
+		font-size:20px;
+	}
+
+	#contact-me{
+		padding:0px 25px 0px;
+		margin-left:auto;
+		margin-bottom: 50px;
+		width:85%;
+		display:block;
+	}
+}
+
+/*for width of a phone in landscape */
+@media screen and (max-width: 640px){
+	header{
+		position:static;
+		margin:auto;
+		height:144px;
+	}
+	.full-header-border{
+		padding-top: 0px;	
+	}
+	#my-name{
+		width:90%;
+		font-size: 28px;
+		padding:25px;
+	}
+	#between-name-and-nav{
+		width:0px;
+	}
+	#page-links-nav{
+		width:90%;
+		padding:21px 0px 20px 0px;
+	}
+	.nav-link{
+		padding-left:9%;
+		padding-right:9%;
+		padding-top:15px;
+		padding-bottom:15px;
+	}
+	.main-content{
+		display:block;
+	}
+	#photo-jonathon{
+		width: 170px;
+		margin:0px auto 20px;
+		display: block;
+	}
+	#first-paragraph{
+		clear:both;
+		margin-top:15px;
+	}
+
+	.new-image-link-column1{
+		width: 90%;
+		display:block;
+		margin-left:auto;
+		margin-bottom:150px;
+	}
+
+	.new-image-link-column2{
+		width: 90%;
+		margin-left:auto;
+		margin-bottom:150px;
+	}
+
+	.portfolio-link-banner{
+		position:absolute;
+		top:90%;
+		width: 100%;
+	}
+
+	#contact-me{
+		clear:both;
+	}
+}
